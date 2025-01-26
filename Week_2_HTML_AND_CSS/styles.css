@@ -1,0 +1,110 @@
+/*Style for paragraphing text and color*/
+p{
+    color: blue;
+    font-size: 25px;
+}
+/*Adding a header for the style color,size and align*/
+h1{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-family: cursive;
+    font-style: inherit;
+
+}
+/*Adding style for the subheader which is size and color*/
+h2{
+    font-size: 30px;
+    color: crimson;
+}
+/*Adding a style for the body element which is color and size*/
+body{
+    background-color: darkcyan;
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+
+}
+/*Adding a style for the list items which are margin,padding and style*/
+li{
+    list-style-type: square;
+    margin: 5px;
+    padding: 5px;
+}
+/*Adding a style to the link which are color and text*/
+a{
+    background-color: lightgreen;
+    color: red;
+    text-decoration: none;
+
+}
+/*Adding a style for the unordered which is color*/
+ul{
+    background-color: yellow;
+}
+/*Adding style for the list items with id*/
+#most-favorite {
+    background-color: cyan;
+    text-decoration: underline;
+}
+/*Adding style for the list items with class*/
+.second-favorite{
+    background-color: green;
+}
+/*Adding style for the main page  with title id*/
+#page-title{
+    text-shadow: 10px 10px magenta;
+}
+/*Adding style for the span with id*/
+#favorite-music-name{
+    background-color: fuchsia;
+    text-shadow: 10px 10px magenta;
+}
+/*Adding style  for the section with class*/
+.favorite-section{
+    background-color: yellow;
+    border: 3px purple dashed;
+    margin: 10px;
+    padding: 15px;
+
+}
+/*Adding a style for the tables, row and cell*/
+table th tr td{
+    padding: 10px;
+    border: black;
+}
+/*Adding style specifically for the table header*/
+td{
+    width: 100px;
+    text-align: center;
+    background-color: green;
+    border: 1px solid #0000;
+    padding: 10px;
+
+}
+/*Adding style for the table rows*/
+tr{
+    background-color: orange;
+}
+.favorite-section img{
+    display:inline-block;
+}
+.favorite-section{
+    text-align: center;
+    margin: 20px;
+}
+.favorite-image{
+    border-radius: 15px;
+    filter: grayscale(50%);
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+#favorite-movie-title{
+    background-color: yellow;
+
+}
+i{
+    color: blueviolet;
+}
