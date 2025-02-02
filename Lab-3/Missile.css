@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: lightgray;
+    padding: 30px;
+}
+h1{
+    color: black;
+}
+
+#real-alert{
+    color: white;
+    background-color: red;
+    border:2px solid darkred;
+}
+#test-only{
+    color: black;
+    background-color: yellow;
+    border:2px solid orange;
+}
+
+.missile-link{
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+
+}
