@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<p>What is the capital of Wisconsin?</p>
+
+<button class="Wrong-answer">BayField</button>
+<button id="Correct-answer">Madison</button>
+<button class="Wrong-answer">New Jersey</button>
+
+<p id="result"></p>
+<script>
+<!--W writing the script-->
+    let correctAnswerButton = document.querySelector('#Correct-answer');
+
+    let defaultButtonColor = correctAnswerButton.style.background;
+
+
+    let result = document.querySelector('#result');
+
+    // Adding the event listener to both wrong answer buttons
+    let WrongAnswerButtons = document.querySelectorAll('.Wrong-answer');
+    // It will loop repeats for each element in the wrong answer buttons node list
+    WrongAnswerButtons.forEach(function (wrongAnswerButton) {
+        console.log(wrongAnswerButton);
+        wrongAnswerButton.addEventListener('click', function () {
+            result.innerHTML = 'Wrong answer, try again';
+            correctAnswerButton.style.backgroundColor = defaultButtonColor;
+        })
+    })
+    // this another  way of doing wrong answer buttons
+    // for (let x=0; x<WrongAnswerButtons.length; x++) {
+    //     let wrongAnswerButton = WrongAnswerButtons[x];
+    //
+    //     wrongAnswerButton.addEventListener('click', function () {
+    // })
+
+
+
+    // Adding an event listener to one correct answer
+    correctAnswerButton.addEventListener('click', function() {
+        result.innerHTML = 'Correct Answer';
+        correctAnswerButton.style.background = 'cyan'
+
+    })
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

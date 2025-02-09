@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <p>Enter same text to add to the list</p>
+<!--Entering  input field for the text  -->
+  <input id="new-text">
+  <!--Adding a button to add text to the list-->
+  <button id="add-text">ADD</button>
+<!--Adding unordered list where the text will be added-->
+  <ul id="list-of-text"></ul>
+<!--  Adding button for the clear list-->
+  <button id="clear">Clear</button>
+
+
+
+
+
+
+
+
+<script>
+<!--Writing a scripts here-->
+  // Adding a selector for the DOM elements
+  let textInput= document.querySelector('#new-text');
+  let addButton = document.querySelector('#add-text');
+  let textList = document.querySelector('#list-of-text');
+  let clearButton = document.querySelector('#clear')
+  // Naming A variables for the number of the elements in the list
+  let elementInList = 0
+  let maxElements = 10
+
+
+  // Adding an event listener for the enter key and button click
+  document.addEventListener('keyup', function () {
+    if(event.keyCode === 13){
+      addButton.click()
+    }
+
+
+  })
+
+  //Adding an event listener for the ADD button
+  addButton.addEventListener('click', function(){
+    //   Getting an input value and remove extra spaces
+    let newText = textInput.value;
+
+    // Checking if an input value is empty
+    if( newText.length === 0){
+      alert('Please enter a valid text');
+      return
+    }
+
+    //Checking if the list has reached the maximum number of elements
+    if(elementInList >= maxElements){
+      alert("no more elements can be added");
+      return
+    }
+    if(textList.length> 50){
+        alert("Error,Please text must be between 1 and 50 characters");
+        return;
+    }
+
+
+
+
+
+    // reading a text in the input
+
+
+
+    // creating a new line elements
+    let newListItems= document.createElement('li')
+    // creating li element text should be the text from input
+    newListItems.innerHTML = newText;
+
+    // adding the new li element as a child of the ul element
+    textList.appendChild(newListItems);
+
+  //   Clear the text in the input
+    textInput.value = '';
+
+    elementInList++
+
+  // Adding an event listener for the clear button
+  })
+clearButton.addEventListener('click', function(){
+  textList.innerHTML = '';
+  elementInList = 0
+
+
+})
+
+
+
+
+
+</script>
+</body>
+</html>

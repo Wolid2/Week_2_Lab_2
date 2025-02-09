@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--Adding a paragraph for the mouse movement-->
+    <p id="mouse-me">Move your mouse here</p>
+
+
+
+
+
+<script>
+<!--Naming a variables for the number of times the mouse enter the element-->
+    let mouseCount= 0
+    // Adding a selector query for the paragraph element
+    let message =document.querySelector("#mouse-me");
+
+    //Adding an event listener for when the mouse enters the elements
+    message.addEventListener("mouseover", function () {
+        // it is increment count
+        mouseCount++;
+        // IT will dis[play a wording based on count
+        if (mouseCount == 1) {
+            message.innerHTML = "Mouse has been here " + mouseCount + " time"
+        }
+        else{
+            message.innerHTML = "Mouse has been here " + mouseCount + " times"
+        }
+
+
+
+    })
+    // Adding an event listener for when the mouse leaves the element
+    message.addEventListener("mouseout", function () {
+        message.innerHTML = "Your mouse is off this message"
+    })
+
+
+
+
+
+
+</script>
+</body>
+</html>
